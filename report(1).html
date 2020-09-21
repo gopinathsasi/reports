@@ -1,0 +1,147 @@
+<html>
+        <head>
+            <title>
+                Test Report
+            </title>
+            <style type="text/css">
+
+      table.greyGridTable {
+      border: 2px solid #FFFFFF;
+      width: 60%;
+      text-align: center;
+      border-collapse: collapse;
+    }
+    table.greyGridTable td, table.greyGridTable th {
+      border: 1px solid #FFFFFF;
+      padding: 3px 4px;
+    }
+    table.greyGridTable tbody td {
+      font-size: 13px;
+    }
+    table.greyGridTable td:nth-child(1) {
+      background: #59F2F7;
+
+    }
+     table.greyGridTable td:nth-child(3) {
+      background: #F75D59;
+
+    }
+    table.greyGridTable td:nth-child(even) {
+      background: #32CD32;
+    }
+    table.greyGridTable thead {
+      background: #C0C0C0;
+      border-bottom: 4px solid #333333;
+    }
+    table.greyGridTable thead th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #333333;
+      text-align: center;
+      border-left: 2px solid #333333;
+    }
+    table.greyGridTable thead th:first-child {
+      border-left: none;
+    }
+
+    table.greyGridTable tfoot {
+      font-size: 180px;
+      font-weight: bold;
+      color: #333333;
+      border-top: 4px solid #333333;
+    }
+    table.greyGridTable tfoot td {
+      font-size: 14px;
+    }
+
+            </style>
+        </head>
+        <body>
+        <h2 class="test-results-header"> Test_Report_Btsports: </h2>
+        <p>This Report shows, how many material_id metadata  quried from Ardome and ingeted into the CMPP</p>
+        <p>Failed Material_ID details</p>
+        <p> </p>
+        <p><b>Asset-sync details:  </b></p>
+        <table class="greyGridTable" style="height: 91px;" width="421">
+    <thead>
+    <tr>
+    <th>Total</th>
+    <th>Passed</th>
+    <th><a href="failed.html">Failed</a></th>
+    <th><a href="Skiped.html">Skipped</a></th>
+    </tr>
+    </thead>
+    <tfoot></tfoot>
+    <tbody>
+    <tr>
+    <td><b>404<b></td>
+    <td>399</td>
+    <td >3</td>
+    <td>2</td>
+    </tr>
+    <tr>
+    <td>Material_ID</td>
+    <td>Material_ID</td>
+    <td>Material_ID</td>
+    <td>Material_ID</td>
+    </tr>
+    </tbody>
+    </table>
+    <p> </p>
+        <p><b>DPP_DETAILS:  </b></p>
+    <table class="greyGridTable" style="height: 91px;" width="421">
+    <thead>
+    <tr>
+    <th>Total</th>
+    <th>DPP_ingest</th>
+    <th><a href="Dpp_notingest.html">DPP_NOTINGEST</a></th>
+    <th><a href="dpp_second.html">DPP_NOT(2 call)</a></th>
+    </tr>
+    </thead>
+    <tfoot></tfoot>
+    <tbody>
+    <tr>
+    <td><b>404<b></td>
+    <td>321</td>
+    <td >30</td>
+    <td>51</td>
+    </tr>
+    <tr>
+    <td>Material_ID</td>
+    <td>Material_ID</td>
+    <td>Material_ID</td>
+    <td>Material_ID</td>
+    </tr>
+    </tbody>
+    </table>
+    <h4> SUMMARY TEST REPORT PIE CHART <h4>
+    <div id="piechart"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Total', '100'],
+      ['Failed',3],
+      ['PASSED',399],
+      ['SKIPPED',2],
+
+    ]);
+
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':'', 'width':550, 'height':400,"align": "left" };
+
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+    </script>
+    <p style="background-color:Tomato width= 60%;">
+        </body>
+    </html>
